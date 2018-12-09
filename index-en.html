@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--        Naslov stranice   -->
+    <title>Suzana CV</title>
+
+    <!--        Meta tagovi    -->
+    <meta charset="utf-8" />
+    <meta name="author" content="Suzana" />
+    <meta name="description" content="cv" />
+    <meta name="keywords" content="cv,biografija,zanimanje,obrazovanje" />
+
+    <!--        Linkovi    -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/ico" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!--    Header   -->
+    <header id="top">
+        <div class="wrapp">
+            <nav>
+                <a href="#info">Info</a>
+                <a href="#edu">Education</a>
+                <a href="#skills">Skills</a>
+            </nav>
+            <div class="lang">
+                <a href="index.html"><img src="images/srb.png" alt="srb" width="32" height="32" /></a>
+                <a href="index-en.html"><img src="images/eng.png" alt="eng" width="32" height="32" /></a>
+            </div>
+        </div>
+    </header>
+
+    <!--    Main  -->
+    <main>
+        <div class="banner">
+            <div class="b-heading">
+                <h1>Suzana Radojević</h1>
+                <h2>Web developer</h2>
+            </div>
+        </div>
+
+        <!--     Info  -->
+        <div class="info">
+            <div class="photo">
+                <img src="images/suzana.jpg" alt="slika" width="300px" height="auto" />
+            </div>
+            <div id="info" class="info-content">
+                <ul>
+                    <li>
+                        <span>name</span> Suzana Radojević</li>
+                    <li><span>email</span> <a href="mailto:suzanaradojevic@hotmail.com">suzanaradojevic@hotmail.com</a></li>
+                    <li><span>mobile</span> <a href="tel:+381637260363">063 72 60 363</a></li>
+                    <li><span>address</span>Kneza Mihaila 1/3/13, Kragujevac</li>
+                </ul>
+
+                <p class="about">
+                    Enthusiastic Web Developer with several responsive and functional demo projects. Enjoys developing data exchange applications and visual content development. Disciplined, dedicated, hard working, fast learning and friendly oriented. Aside web development her passion are cooking, running and reading.
+                </p>
+                <ul class="conect">
+                    <li><a href="https://www.linkedin.com/in/suzana-radojevic-87b89115b/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/sznzm" target="_blank"><i class="fab fa-github-square"></i></a></li>
+                    <li><a href="https://www.facebook.com/ereshkigal.incage?__tn__=%2CdlC-R-R&eid=ARBO6ko2bD4YnxQA7tPSzCxuw8bDYswT9iDVyOjG2qJCa14L_s7er9I351VBg1nW3wgdHgtBnzzGydKB&hc_ref=ARQvLETmBjTFrH7aSsDOwbgqsM9A7ZEJ0sIzCY5345aTsx15J3xVCsZFL4BVdryOnVk" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/4h43yc/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="edu-skills">
+            <div id="edu" class="edu">
+                <h3>Education</h3>
+                <ul>
+                    <li>HTML/CSS, ICT Cluster Academy, Kragujevac</li>
+                    <li>Basics of programming with JavaScript, ICT Cluster Academy, Kragujevac</li>
+                    <li>PHP Basic curse, ICT Cluster academy, Kragujevac</li>
+                    <li>Faculty of Philosophy -History department, University of Belgrade</li>
+                    <li>High School of Economics, Kragujevac</li>
+                    <li>W3Schools, FreeCodeCamp, Codecademy, Sololearn.
+                    </li>
+                </ul>
+            </div>
+
+            <div id="skills" class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML5 / CSS3
+                        <div class="bar">
+                            <span class="prog html-css"></span>
+                        </div>
+                    </li>
+                    <li>JavaScript
+                        <div class="bar">
+                            <span class="prog javascript"></span>
+                        </div>
+                    </li>
+                    <li>PHP / MySQL
+                        <div class="bar">
+                            <span class="prog php"></span>
+                        </div>
+                    </li>
+                    <li>Responsive web design
+                        <div class="bar">
+                            <span class="prog responsive"></span>
+                        </div>
+                    </li>
+                    <li>English language
+                        <div class="bar">
+                            <span class="prog eng"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2018 by Suzana</p>
+    </footer>
+    <a href="#top" class="up"><i class="far fa-hand-point-up"></i></a>
+
+    <script>
+        $(document).ready(function() {
+            $("a").on('click', function(event) {
+
+                if (this.hash !== "") {
+
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
