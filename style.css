@@ -193,11 +193,13 @@ nav a:hover {
 }
 
 .edu,
-.skills {
+.skills,
+.projects {
 	padding: 50px 30px;
 	line-height: 1.5em;
 	color: var(--c-white);
 }
+
 
 .edu {
 	grid-column: 1/2;
@@ -216,12 +218,34 @@ nav a:hover {
 	padding-left: 30px;
 }
 
+.projects {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	border-right: 1px solid #d190ed;
+	margin-right: -1px;
+}
+
+.projects a {
+	color: var(--c-white);
+}
+
+.projects a:hover {
+	color: #d190ed;
+}
+
+.skills h3,
+.skills ul {
+	padding-left: 30px;
+}
+
 
 .edu ul li,
-.skills ul li {
+.skills ul li,
+.projects ul li {
 	list-style-image: url(images/list.svg);
 	letter-spacing: 0.03em;
 }
+
 
 
 /*========Progress ba=======*/
@@ -420,7 +444,8 @@ footer p {
 
 
 	.edu,
-	.skills {
+	.skills,
+	.projects {
 		padding: 0;
 		width: 100%;
 	}
@@ -429,9 +454,11 @@ footer p {
 		font-size: 20px;
 	}
 
+	
 	.edu ul,
-	.skills ul {
-		font-size: 14px;
+	.skills ul,
+	.projects ul {
+		font-size: 13px;
 	}
 
 	.edu {
